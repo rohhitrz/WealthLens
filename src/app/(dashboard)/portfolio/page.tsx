@@ -7,7 +7,6 @@ import {
   RiArrowUpLine, 
   RiArrowDownLine, 
   RiAddLine, 
-  RiCloseLine,
   RiArrowUpSLine, 
   RiArrowDownSLine 
 } from 'react-icons/ri';

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, OrbitControls } from '@react-three/drei';
 import { useTheme } from '@/components/ThemeProvider';

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Script from 'next/script';
 import '../styles/globals.scss';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
@@ -13,7 +14,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <Script id="theme-script" strategy="beforeInteractive">
+          {`
+            (function() {
+              try {
+                var storedTheme = localStorage.getItem('theme');
+                var theme = storedTheme || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+              } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+              }
+            })();
+          `}
+        </Script>
+      </head>
       <body>
         <ThemeProvider>
           {children}

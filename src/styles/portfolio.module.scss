@@ -163,7 +163,13 @@
 
 .quantity {
   @media (max-width: 767px) {
-    display: none;
+    min-width: 40px;
+    font-size: var(--text-xs);
+    
+    &:before {
+      content: '$';
+      display: inline;
+    }
   }
 }
 

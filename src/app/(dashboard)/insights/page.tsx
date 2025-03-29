@@ -38,11 +38,7 @@ export default function InsightsPage() {
       '#d6fbf9',
     ],
     legend: {
-      position: 'bottom' as const,
-      fontSize: '14px',
-      labels: {
-        colors: 'var(--foreground)',
-      },
+      show: false, // Hide the built-in legend, we'll use our custom one
     },
     dataLabels: {
       enabled: false,
@@ -59,8 +55,7 @@ export default function InsightsPage() {
         breakpoint: 640,
         options: {
           legend: {
-            position: 'bottom' as const,
-            fontSize: '12px',
+            show: false,
           },
         },
       },
